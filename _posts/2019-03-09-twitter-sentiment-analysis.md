@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title:  "트위터 감성분석 (Twitter Sentiment Analysis)으로 사람들의 행복도를 예측할 수 있을까?"
 ---
 
