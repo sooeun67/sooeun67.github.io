@@ -7,6 +7,16 @@ title:  "트위터 감성분석 (Twitter Sentiment Analysis)으로 사람들의 
 
 <img src="../images/2019-03-09-twitter-sentiment-analysis/스크린샷 2021-12-13 오후 1.49.56.png" alt="스크린샷 2021-12-13 오후 1.49.56" style="zoom:80%;" />
 
+
+
+
+
+![twitter_sentiment_image](../images/2019-03-09-twitter-sentiment-analysis/twitter_sentiment_image.jpeg)
+
+
+
+
+
 ### 이 프로젝트는 미국 내 트위터 감성 분석을 통해 사람들의 행복도 상관성 및 관계를 살펴본다. 
 
 파이썬으로 트위터 데이터를 스크랩하고, Wallethub 사이트로부터 데이터를 수집했으며 데이터 전처리를 진행했다. 트위터 데이터와 주별 행복도 데이터의 주요 특징들을 살펴보며 데이터 인사이트를 도출하였다.
