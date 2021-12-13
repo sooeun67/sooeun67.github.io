@@ -5,7 +5,7 @@ title:  "트위터 감성분석 (Twitter Sentiment Analysis)으로 사람들의 
 
 # [트위터 감성분석 (Twitter Sentiment Analysis)](https://sooeun67.github.io/twitter_sentiment_happiness/)
 
-<img src="../../../../Desktop/twitter_sentiment_image.jpeg" alt="twitter_sentiment_image" style="zoom:80%;" />
+<img src="../images/2019-03-09-twitter-sentiment-analysis/스크린샷 2021-12-13 오후 1.49.56.png" alt="스크린샷 2021-12-13 오후 1.49.56" style="zoom:80%;" />
 
 ### 이 프로젝트는 미국 내 트위터 감성 분석을 통해 사람들의 행복도 상관성 및 관계를 살펴본다. 
 
