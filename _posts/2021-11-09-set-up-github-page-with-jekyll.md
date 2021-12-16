@@ -1,7 +1,12 @@
 ---
 layout: single
 title:  "Jekyll로 Github 블로그 연동하여 개발 환경 구축하기(Mac OS)"
-categories: github
+categories:
+  - github
+tags:
+  - github
+  - blog
+  - jekyll
 toc: true
 ---
 
