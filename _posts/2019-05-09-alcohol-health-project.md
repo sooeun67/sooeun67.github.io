@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "(Alcohol & Health Project)"
+title:  "알코올과 정신적/육체적 건강 관계를 데이터 시각화로 살펴보자 (Alcohol & Health Project)"
 categories:
   - data science
 tags:
