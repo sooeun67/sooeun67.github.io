@@ -13,6 +13,10 @@ tags:
 
 ![africa-visualization](../images/2019-04-09-africa-visualization-project/africa-visualization-9717568.png)
 
+test
+
+![africa2](../images/2019-04-09-africa-visualization-project/africa-visualization-9717568.png)
+
 - ### 이 프로젝트는 남아프리카 경제 성장과 인프라를 static/interactive 시각화를 통해 살펴본다.
 - ### 본 프로젝트는 두 파트로 나뉘어져 있으며 static plot들로 이루어진 [Part1](https://sooeun67.github.io/Africa/Home.html) 은 여기에서 확인할 수 있다
 
