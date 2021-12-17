@@ -9,9 +9,9 @@ tags:
   - 데이터분석
 ---
 
-# [ (Alcohol & Health Project)](https://sooeun67.github.io/Alcohol/Home.html)
+# [알코올과 정신적/육체적 건강 상관관계를 데이터 시각화로 살펴보자 (Alcohol & Health Project)](https://sooeun67.github.io/Alcohol/Home.html)
 
-![alcohol-main](../images/2019-05-09-alcohol-health-project/alcohol-main-9710852.png)
+![alcohol-main](/assets/img/alcohol-main.png)
 
 - ### 이 프로젝트는 알코올과, 정신적/육체적 건강의 상관관계를 시각화를 통해 살펴본다.
 

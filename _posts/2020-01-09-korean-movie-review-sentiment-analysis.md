@@ -9,7 +9,9 @@ tags:
 ---
 
 # [네이버 영화리뷰 데이터를 활용한 감성 분석 (Korean Movie Review Sentiment Analysis)](https://github.com/sooeun67/NLP/blob/master/korean_movie_project/aboutme.md)
-![movie](../images/2020-01-09-korean-movie-review-sentiment-analysis/movie.jpeg)
+
+![movie](/assets/img/movie-sentiment.jpeg)
+
 - ### The full report is located [here](https://github.com/sooeun67/NLP/blob/master/korean_movie_project/korean_movie_paper.pdf)
 - ### The poster for 10 minute presentation is located [here](https://github.com/sooeun67/NLP/blob/master/korean_movie_project/korean_movie_poster.pdf).
 - ### The full code is located [here](https://github.com/sooeun67/NLP/blob/master/korean_movie_project/korean_movie.ipynb).

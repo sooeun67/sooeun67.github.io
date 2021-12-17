@@ -113,10 +113,7 @@ echo 'export PATH="$HOME/.gem/ruby/X.X.0/bin:$PATH"' >> ~/.bash_profile
 gem env
 ```
 
-<img src="../images/2021-11-09-set-up-github-page-with-jekyll/스크린샷 2021-12-13 오후 6.04.58.png" alt="스크린샷 2021-12-13 오후 6.04.58" style="zoom:63%;" />
-
-
-
+![cmd](/assets/img/set-up-github-page-with-jekyll-command-line.png)
 
 
 # 2. Jekyll 로 로컬 서버 실행

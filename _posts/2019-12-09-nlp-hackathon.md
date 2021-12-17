@@ -10,7 +10,7 @@ tags:
 
 # [자연어처리 해커톤(NLP Hackathon)](https://github.com/sooeun67/NLP/blob/master/Hackathon.pdf)
 
-![hackathon](../images/2019-12-09-nlp-hackathon/hackathon.jpeg)
+![hackathon](/assets/img/nlp-hackathon.jpeg)
 
 - ### tokenizing, stemming 등 자연어 처리 툴로 서버/데이터베이스에 접근하여 주어진 언어를 탐색하고 PoS Tagging, NER, elastic search index 등을 수행하여 1위 팀으로 수상
 

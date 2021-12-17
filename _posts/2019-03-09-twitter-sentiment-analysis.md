@@ -11,10 +11,7 @@ tags:
 
 # [트위터 감성분석 (Twitter Sentiment Analysis)](https://sooeun67.github.io/twitter_sentiment_happiness/)
 
-![twitter_sentiment_image](../images/2019-03-09-twitter-sentiment-analysis/twitter_sentiment_image.jpeg)
-
-
-
+![twitter](/assets/img/twitter_sentiment_image.jpeg)
 
 ### 이 프로젝트는 미국 내 트위터 감성 분석을 통해 사람들의 행복도 상관성 및 관계를 살펴본다. 
 
