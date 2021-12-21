@@ -113,6 +113,7 @@ echo 'export PATH="$HOME/.gem/ruby/X.X.0/bin:$PATH"' >> ~/.bash_profile
 gem env
 ```
 
+
 ![cmd](/assets/img/set-up-github-page-with-jekyll-command-line.png)
 
 
