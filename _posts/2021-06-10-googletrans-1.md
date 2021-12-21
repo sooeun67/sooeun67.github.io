@@ -5,6 +5,7 @@ categories:
   - data science
 tags:
   - pandas
+  - python
 ---
 
 **구글 번역 API [googletrans](https://github.com/ssut/py-googletrans) 를 통해 데이터 프레임(dataframe)을 한글 <-> 영어/외래어 변환하는 모듈을 개발 하였습니다.**
