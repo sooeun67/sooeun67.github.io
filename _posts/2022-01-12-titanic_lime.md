@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "[Explainable AI] LIME 으로 머신러닝 모델을 설명해보자"
+title:  "[Explainable AI] LIME 으로 머신러닝 모델을 해석해보자"
 categories: data analysis
 tag: [python, machine learning, 데이터분석]
 toc: true
