@@ -1,9 +1,12 @@
 ---
 layout: single
 title:  "[Explainable AI] LIME 으로 머신러닝 모델을 해석해보자"
-categories: data analysis
-tag: [python, machine learning, 데이터분석]
-toc: true
+categories: Explainable AI
+tags: 
+  - python
+  - machine learning
+  - 데이터분석
+toc: false
 author_profile: false
 ---
 
@@ -81,7 +84,7 @@ author_profile: false
 
 <a id = 'top-of-notebook'></a>
 
-# LIME With Titanic Data
+Explainable AI(설명 가능한 인공지능)의 대표적인 기법인 LIME을 tabular data 에 적용하여 모델을 해석해보자.
 
 
 ## Table of Contents
@@ -519,7 +522,7 @@ RandomForestClassifier(max_depth=10, min_samples_leaf=2, n_estimators=10)
 ## LIME 해석 위한 예시 데이터
 
 
-#### Validation set 에서 Survived 와 did not survive 각각 준비
+### Validation set 에서 Survived 와 did not survive 각각 준비
 
 
 
@@ -831,44 +834,17 @@ person_2 = X_val.loc[[439]] # Did not Survive
 
 <a id = 'LIME'></a>
 
-## Explainability with LIME
+# Explainability with LIME
 
-
-#### Instantiate LIME tabular
+## Instantiate LIME tabular
 
 - Tabular Data 에 대해서 LIME represents a weighted combination of columns
-
-
-
 - Args/Parameters
-
-
-
-1) training_data: numpy 2d array
-
-
-
-2) mode: "classification" or "regression"
-
-
-
-3) feature_names: list of names (strings) corresponding to the columns
-
-                in the training data
-
-
-
-4) class_names: list of class names, ordered according to whatever the
-
-                classifier is using. If not present, class names will be '0',
-                
-                '1', ...
-
-
-
-
-
-
+  - 1) training_data: numpy 2d array
+  - 2) mode: "classification" or "regression"
+  - 3) feature_names: list of names (strings) corresponding to the columns in the training data
+  - 4) class_names: list of class names, ordered according to whatever the classifier is using. If not present, class names will be '0', '1', ...
+  
 ```python
 # Importing LIME
 import lime.lime_tabular
@@ -887,41 +863,15 @@ lime_explainer = lime.lime_tabular.LimeTabularExplainer(X_train.values,
 predict_rfc_prob = lambda x: rfc.predict_proba(x).astype(float)
 ```
 
-#### 두 가지 케이스에 대한 LIME 해석
-
-
-
-#### 케이스 1)
-
-
-
+# 두 가지 케이스에 대한 LIME 해석
+### 케이스 1)
  - 왼쪽 패널 ▶ Random Forest Model 은 "Survived" 일 거라고 거의 100% 예측했다
-
-
-
  - 중앙 패널 ▶ 특정 데이터 포인트의 각각의 feature 를 통해 (중요도순) 예측을 설명하고자 한다
-
-
-
-     - 이 사람(sample)의 Sex_female feature에 대한 value는 1인데, 0<Sex_female<=1 에 해당되므로 "Survived" 라고 분류될 경향이 더 높다
-
-
-
+   - 이 사람(sample)의 Sex_female feature에 대한 value는 1인데, 0<Sex_female<=1 에 해당되므로 "Survived" 라고 분류될 경향이 더 높다
    - 같은 원리로 이 샘플 Sex_male <= 0 에 해당하기 때문에, "Survived" 라고 분류될 경향이 더 높다
-
    - 이 샘플은 Age_Bins_child = 1 이므로, Age_Bins_child  > 0.00 에 해당하기 때문에 "Survived" 라고 분류될 경향이 더 높다
-
-
-
-  - 그런가하면 Section_E 는 다른 해석을 내놓았다. Section_E= 0 이므로, Section_E <= 0.00 에 해당하기 때문에 "Did Not Survive" 라고 설명한다
-
-
-
-
-
+   - 그런가하면 Section_E 는 다른 해석을 내놓았다. Section_E= 0 이므로, Section_E <= 0.00 에 해당하기 때문에 "Did Not Survive" 라고 설명한다
 - 오른쪽 패널 ▶ 이 샘플의 features & values 를 나타낸다
-
-
 
 ```python
 person_1_lime = lime_explainer.explain_instance(person_1.iloc[0].values,
@@ -933,44 +883,15 @@ person_1_lime.show_in_notebook()
 
 ![lime_case1](/assets/img/2022-01-12-titanic_lime/lime_case1.png)
 
-#### 케이스 2)
-
-
-
+## 케이스 2)
  - 왼쪽 패널 ▶ Random Forest Model 은 아래 샘플이 "Did Not Survive" 일 거라고 94% 예측했다
-
-
-
  - 중앙 패널 ▶ 특정 데이터 포인트의 각각의 feature 를 통해 (중요도순) 예측을 설명하고자 한다
-
-
-
-     - 이 사람(sample)의 Sex_female feature에 대한 value는 1인데, 0<Sex_female<=1 에 해당되므로 "Did Not Survive" 라고 예측한 것에 대한 설명력이 높다 
-
-
-
+   - 이 사람(sample)의 Sex_female feature에 대한 value는 1인데, 0<Sex_female<=1 에 해당되므로 "Did Not Survive" 라고 예측한 것에 대한 설명력이 높다 
    - 같은 원리로 이 샘플 Sex_male <= 0 에 해당하기 때문에, "Did Not Survive" 라고 분류될 경향이 더 높다
-
-
-
    - 이 샘플은 Age_Bins_child = 0 이므로, Age_Bins_child  <= 0.00 에 해당하기 때문에 "Did Not Survive" 라고 분류될 경향이 더 높다
-
-
-
    - 또한, 이 샘플은 Section_E = 0 이므로, Section_E  <= 0.00 에 해당하기 때문에 "Did Not Survive" 라고 분류될 경향이 더 높다
-
-
-
-  - 그런가하면 Pclass_3 는 다른 해석을 내놓았다. Pclass_3= 0 이므로, Pclass_3 <= 0.00 에 해당하기 때문에 "Survived" 라고 설명한다
-
-
-
-
-
+   - 그런가하면 Pclass_3 는 다른 해석을 내놓았다. Pclass_3= 0 이므로, Pclass_3 <= 0.00 에 해당하기 때문에 "Survived" 라고 설명한다
 - 오른쪽 패널 ▶ 이 샘플의 features & values 를 나타낸다
-
-
-
 
 ```python
 person_2_lime = lime_explainer.explain_instance(person_2.iloc[0].values,
@@ -980,14 +901,9 @@ person_2_lime.show_in_notebook()
 # person_2_lime.save_to_file("person_2.html")
 ```
 
-
-
 ![lime_case2](/assets/img/2022-01-12-titanic_lime/lime_case2.png)
 
-
-
 [*Return to top of notebook*](#top-of-notebook)
-
 
 # To Do & consideration
 
@@ -997,13 +913,5 @@ person_2_lime.show_in_notebook()
 
 # Reference
 
-https://towardsdatascience.com/interpreting-black-box-ml-models-using-lime-4fa439be9885
-
-
-
-
-
-
-```python
-
-```
+- [https://towardsdatascience.com/interpreting-black-box-ml-models-using-lime-4fa439be9885](https://towardsdatascience.com/interpreting-black-box-ml-models-using-lime-4fa439be9885)
+- [tabular data에 LIME이 어떻게 적용하는지 궁금하다면](https://github.com/marcotcr/lime/blob/master/lime/lime_tabular.py)
