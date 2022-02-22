@@ -4,7 +4,6 @@ title:  "[Virtualbox] 클립보드 복사 붙여넣기 사용하기"
 categories:
 tags:
   - virtualbox
-toc: true
 ---
 
 Linux 환경 사용을 위해 VirtualBox 에 Ubuntu를 세팅했는데, 패키지 설치를 하려고 보니 복사 붙여넣기가 안된다..

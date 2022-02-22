@@ -8,7 +8,6 @@ tags:
   - NLP
   - LIME
   - Paper Review
-toc: true
 ---
 
 작년 12월부터 Explainable AI(설명가능한 인공지능)에 대해 리서치를 해왔다. 

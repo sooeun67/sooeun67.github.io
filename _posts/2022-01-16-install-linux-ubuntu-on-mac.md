@@ -5,7 +5,6 @@ categories:
 tags:
   - linux
   - virtualbox
-toc: true
 ---
 
 모델 돌리는데 Linux 환경이 필요해져서 집에 있는 윈도우PC에서 할까 하다 용량이 더 넉넉한 맥북에 가상머신을 설치해서 리눅스 환경을 셋팅하기로 했다.
