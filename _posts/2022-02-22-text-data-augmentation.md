@@ -60,11 +60,9 @@ tags:
 
 
 
-![data_size_and_model_performance](/assets/img/2022-02-22-text-data-augmentation/data_size_and_model_performance.png)
+![data_size_and_model_performance](/assets/img/2022-02-22-text-data-augmentation/data_size_and_model_performance.png){: width="70%" height="70%"}
 
-[그림1] 데이터 양에 따른 모델 성능 비교 그래프
-
-출처: https://medium.com/@tanmayshimpi/difference-between-ml-and-deep-learning-with-respect-to-splitting-of-the-dataset-into-375d433ee2c8
+<br/>
 
 데이터 양이 증가함에 따라 기존 전통적인 머신 러닝과 딥러닝의 성능 차이는 가파르게 벌어집니다. 다시 말해, 딥러닝은 많은 양의 데이터를 필요로 하고 데이터가 너무 적으면 그 알고리즘이 제대로 성능을 보여주지 못한다는 뜻이기도 하죠.   
 
@@ -90,11 +88,8 @@ Data augmentation 은 기존에 부족한 데이터 어떤 변화를 가해서, 
 
 
 
-![benefit_of_data_augmentation](/assets/img/2022-02-22-text-data-augmentation/benefit_of_data_augmentation.png)
+![benefit_of_data_augmentation](/assets/img/2022-02-22-text-data-augmentation/benefit_of_data_augmentation.png){: width="80%" height="80%"}
 
-[그림2] Data augmentation 효과
-
-출처:https://research.aimultiple.com/data-augmentation/
 
 
 
@@ -111,7 +106,7 @@ Data augmentation 은 특히 비전 분야에서 활발히 적용되며 쉽게 �
 
 <br/>
 
-![image_aug_sample](/assets/img/2022-02-22-text-data-augmentation/image_aug_sample.png)
+![image_aug_sample](/assets/img/2022-02-22-text-data-augmentation/image_aug_sample.png){: width="80%" height="80%"}
 
 <br/>
 
@@ -119,10 +114,8 @@ Data augmentation 은 특히 비전 분야에서 활발히 적용되며 쉽게 �
 
 <br/>
 
-![quoka](/assets/img/2022-02-22-text-data-augmentation/quoka.jpeg)
+![quoka](/assets/img/2022-02-22-text-data-augmentation/quoka.png){: width="60%" height="60%"}
 
-[그림] imgaug 로 쿼카 이미지를 60가지 넘는 방법으로 증강
-출처: https://github.com/aleju/imgaug
 
 <br/>
 
@@ -175,8 +168,7 @@ Data augmentation 은 특히 비전 분야에서 활발히 적용되며 쉽게 �
 
 
 
-![eda_sample](/assets/img/2022-02-22-text-data-augmentation/eda_sample.png)
-
+![eda_sample](/assets/img/2022-02-22-text-data-augmentation/eda_sample.png){: width="70%" height="70%"}
 
 
 > 영어라 예제를 보아도 한눈에 들어오지 않을 수 있을 것 같아요..! 한국어가 편한 저를 위해서라도 한국어 예시를 아래 표에 만들어 두었어요 :) 
@@ -194,16 +186,7 @@ Data augmentation 은 특히 비전 분야에서 활발히 적용되며 쉽게 �
 [korEDA](https://github.com/catSirup/KorEDA/tree/master) 는 EDA기법을 한국어로 사용할 수 있도록 wordnet 부분을 교체한 프로젝트 입니다. 
 
 
-
-| 동작 |                             문장                             |
-| :--: | :----------------------------------------------------------: |
-| None | 제가 우울감을 느낀지는 오래됐는데 점점 개선되고 있다고 느껴요 |
-|  SR  | 제가 **슬픔을** 느낀지는 오래됐는데 점점 개선되고 있다고 느껴요 |
-|  RI  | 제가 우울감을 느낀지는 **꽤** 오래됐는데 점점 **요즘** 개선되고 있다고 **진짜** 느껴요 |
-|  RS  | 제가 우울감을 느낀지는 오래됐는데 **느껴요** 개선되고 있다고 **점점** |
-|  RD  |      우울감을 느낀지는 오래됐는데 점점 개선되고 있다고       |
-
-
+![korean_eda](/assets/img/2022-02-22-text-data-augmentation/korean_eda.png)
 
 단어들이 대체되거나 추가되는 SR이나 RI는 상대적으로 안전하게 data augmentation 기법이 될 수 있을 것 같습니다. 그에 반해 단어들의 위치가 바뀌거나 제거되는 경우 문장이 말이 되지 않거나 마무리가 되지 않네요. 프로젝트의 방향이나 모델링의 종류나 목적에 따라, 노이즈가 데이터가 얼마나 있나를 고민하며 이 기법들을 적절히 선택하여 활용할 수 있을 것 같습니다. 
 
