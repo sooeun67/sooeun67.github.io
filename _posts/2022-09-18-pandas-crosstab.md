@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "[Pandas Crosstab] 파이썬으로 빈도표 (Frequency Table) 쉽게 만들기"
+title:  "[Pandas-Crosstab] 파이썬으로 빈도표 쉽게 만드는 초간단 방법"
 categories:
   - data science
 tags:
