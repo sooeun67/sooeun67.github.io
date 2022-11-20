@@ -5,6 +5,8 @@ categories:
   - data science
 tags:
   - python
+  - Deep Learning
+  - XAI
 author_profile: false
 ---
 
