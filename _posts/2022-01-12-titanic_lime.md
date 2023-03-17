@@ -1,7 +1,8 @@
 ---
 layout: single
 title:  "[Explainable AI] LIME 으로 머신러닝 모델을 해석해보자"
-categories: Explainable AI
+categories: 
+  - Explainable AI
 tags: 
   - python
   - machine learning
