@@ -40,7 +40,7 @@ tags:
 
 전반적인 FLOW 는 아래 다이어그램과 같다.
 
-<img src="/Users/sooeunoh/Documents/GitHub/sooeun67.github.io/assets/img/2023-04-02-twitter-opensourced/open-algorithm.png.img.fullhd.medium.png" width="500" height="300"/>
+<img src="/assets/img/2023-04-02-twitter-opensourced/open-algorithm.png.img.fullhd.medium.png" width="800" height="700"/>
 
 ----------------
 
@@ -83,7 +83,8 @@ In-Network 의 가장 중요한 구성 요소는 **Real Graph** 인데, **_<U><s
 145k 개의 커뮤니티가 있으며, 3주마다 업데이트 된다. 사용자와 트윗은 커뮤니티 공간에서 표현되며, 여러 커뮤니티에 속할 수 있다. 
 아래 그림은 큰 커뮤니티 예시들이다.
 
-<img src="/Users/sooeunoh/Documents/GitHub/sooeun67.github.io/assets/img/2023-04-02-twitter-opensourced/simclusters.png.img.fullhd.medium.png" width="500" height="300">
+<img src="/assets/img/2023-04-02-twitter-opensourced/simclusters.png.img.fullhd.medium.png" width="600" height="400"/>
+
 
 이러한 커뮤니티에 트윗을 포함시키는 방법은 **각 커뮤니티에서 트윗의 현재 인기도**를 살펴보는 건데,
 커뮤니티의 사용자들이 트윗을 좋아할수록 해당 트윗은 그 커뮤니티와 관련이 더 많이 된다.
@@ -119,3 +120,10 @@ In-Network 의 가장 중요한 구성 요소는 **Real Graph** 인데, **_<U><s
 
 프로세스의 마지막 단계에서, **<U>시스템은 트윗과 non-트윗(광고, 팔로우 추천 등) 콘텐츠를 함께 섞어서</U>** 디바이스에 나타나도록 한다.
 이 파이프라인은 하루 약 50억 번 실행되며 평균 1.5초 이하로 완료된다. 단일 파이프라인 실행에는 CPU 시간으로 220 초 정도 걸린다고 한다. 
+
+----------------
+
+## Reference
+
+- https://blog.twitter.com/engineering/en_us/topics/open-source/2023/twitter-recommendation-algorithm
+- https://www.digitaltoday.co.kr/news/articleView.html?idxno=473090
