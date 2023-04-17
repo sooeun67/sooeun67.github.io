@@ -5,6 +5,10 @@ categories:
   - data science
 tags:
   - AI
+  - NLP
+  - ChatGPT
+  - OpenAI
+  - 데보션
 ---
 
 # ChatGPT로 연일 핫한 OpenAI 의 API를 구글 코랩에서 쉽게 사용해서  [ChatGPT](https://openai.com/blog/chatgpt/)  와 Whisper 모델을 한 번 체험해보자!

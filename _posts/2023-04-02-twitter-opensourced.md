@@ -5,6 +5,9 @@ categories:
   - data science
 tags:
   - AI
+  - 트위터
+  - Twitter
+  - 데보션
 ---
 
 ## 트위터는 트윗 추천에 쓰이는 알고리즘 소스코드를 [깃허브(GitHub)](https://github.com/twitter/the-algorithm-ml)에 공개했다
@@ -127,3 +130,4 @@ In-Network 의 가장 중요한 구성 요소는 **Real Graph** 인데, **_<U><s
 
 - https://blog.twitter.com/engineering/en_us/topics/open-source/2023/twitter-recommendation-algorithm
 - https://www.digitaltoday.co.kr/news/articleView.html?idxno=473090
+- https://github.com/twitter/the-algorithm
