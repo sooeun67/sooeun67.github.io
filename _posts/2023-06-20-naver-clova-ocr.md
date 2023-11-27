@@ -1,4 +1,5 @@
 ---
+
 layout: single
 title:  "[ChatGPT/AI] 나만의 ChatGPT 모델 만들기 (w/ Fine-Tune)"
 categories:
@@ -10,9 +11,6 @@ tags:
   - OpenAI
   - 데보션
 ---
-
-
-
 
 # Encountered Problems & Solutions
 
