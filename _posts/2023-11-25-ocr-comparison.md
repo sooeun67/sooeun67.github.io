@@ -33,10 +33,8 @@ tags:
 
 OCR은 Detection, Classification, Segmentation 기법이 결합된 형태로, 최근에는 속도를 개선하거나 프로세스를 조정하는 등 다양한 형태로 발전하고 있습니다. OCR 엔진에는 여러 OCR 모델과 알고리즘이 단계 별 task를 수행합니다. Text detection과 Text Recognition이 가장 중심적인 task 이며, 전체적인 워크 플로우는 아래와 같습니다. 
 
-<figure>
-<img src="/Users/sooeunoh/Documents/GitHub/sooeun67.github.io/assets/img/2023-11-25-ocr-comparison/ocr-workflow.png" alt="ocr-workflow" style="width:100%">
+<img src="/assets/img/2023-11-25-ocr-comparison/ocr-workflow.png" alt="ocr-workflow" style="width:100%">
 <figcaption align = "center"><b>이미지 출처 - www.thedatahunt.com/trend-insight/ocr</b></figcaption>
-</figure>
 
 1. 이미지 전처리: 스캔된 문서를 기울기 보정, 얼룩 제거 등 손상된 이미지를 복구
 2. Text Detection: Object Detection의 확장 버전이라고 볼 수 있고, 검출된 영역의 문자가 무엇인지 인식하는 과정
@@ -78,20 +76,18 @@ OCR은 기업의 이미지 및 문서 처리 업무를 자동화하여 프로세
 4. 영문 pdf 문서 + 표: HuggingFace AWS PDF 1페이지
 5. 영문 form: 유학생 비자에 필요한 정부 서류 (I-20 sample form)
 
-![test-images](/Users/sooeunoh/Documents/GitHub/sooeun67.github.io/assets/img/2023-11-25-ocr-comparison/test-images.png)
+![test-images](/assets/img/2023-11-25-ocr-comparison/test-images.png)
 
 ## 테스트 예시
 API를 활용하여 OCR 인식 결과 텍스트와 highlighed bounding box 까지 출력되도록 구현해보았습니다.
-<figure>
-<img src="/Users/sooeunoh/Documents/GitHub/sooeun67.github.io/assets/img/2023-11-25-ocr-comparison/detection-sample.png" alt="detection-sample" style="width:80%">
+<img src="/assets/img/2023-11-25-ocr-comparison/detection-sample.png" alt="detection-sample" style="width:80%">
 <figcaption align = "center"></figcaption>
-</figure>
 
 ## 서비스별 소요 시간
 서비스별, 테스트 이미지별 소요 시간을 비교한 그래프 입니다. 
 해당 테스트를 통해 속도 측면에서 가장 우수한 성능을 보여준 서비스는 Google Cloud Vision, Azure Document Intelligence, Upstage 와 Naver Clova 순이라고 볼 수 있을 것 같네요.
 
-![image-20231127095426445](/Users/sooeunoh/Documents/GitHub/sooeun67.github.io/assets/img/2023-11-25-ocr-comparison/image-20231127095426445.png)
+![image-20231127095426445](/assets/img/2023-11-25-ocr-comparison/image-20231127095426445.png)
 
 
 # OCR 서비스 비교평가 테이블 (2023/11/21 기준)
@@ -101,7 +97,7 @@ API를 활용하여 OCR 인식 결과 텍스트와 highlighed bounding box 까�
 
 
 |                              | **Tesseract**                                                | **EasyOCR**                                                  | **Google Vision**                                            | **AWS** **Textract**                                         | **Azure Document Intelligence**                              | **Naver** **Clova**                                          | **Upstage**                                                  | **PaddleOCR**                                                |
-| :---------------------------: | :------------------------------------------------------------: | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| :---------------------------: | :------------------------------------------------------------: | :------------------------------------------------------------: | :------------------------------------------------------------: | :------------------------------------------------------------: | :------------------------------------------------------------: | :------------------------------------------------------------: | :------------------------------------------------------------: | :------------------------------------------------------------: |
 | **Open Source**              | O                                                            | O                                                            | X                                                            | X                                                            | X                                                            | X                                                            | X                                                            | O                                                            |
 | **한글  인식**               | 중                                                           | 하                                                           | 중상                                                         | 최하(지원X)                                                  | 중상                                                         | 상                                                           | 상                                                           | 중(추가 테스트 필요)                                         |
 | **영문  인식**               | 상                                                           | 하                                                           | 상                                                           | 상                                                           | 상                                                           | 상                                                           | 상                                                           | 상                                                           |
@@ -117,10 +113,8 @@ API를 활용하여 OCR 인식 결과 텍스트와 highlighed bounding box 까�
 | **우선 검토해볼만한 서비스** |                                                              |                                                              | ✔                                                            |                                                              | ✔                                                            | ✔                                                            | ✔                                                            |                                                              |
 
 **특화 모델: 영수증, 사업자등록증 등 특정 문서를 학습한 OCR 모델로 보통 해당 양식의 이미지 정보가 미리 정의된 JSON 구조에 맞추어 리턴됨*
-
-*요금: 1건, 일반 OCR, Base Plan 기준이며, 건수/목적에 따라 매우 상이(많은 서비스에서 특정 건까지는 무료로 제공하기도 함)*
-
-*Model Customization: Fine-Tune 이라고 보면 된다. "Train with My Own Data" 를 통해 모델을 미세조정할 수 있도록 기능 제공*
+요금: 1건, 일반 OCR, Base Plan 기준이며, 건수/목적에 따라 매우 상이(많은 서비스에서 특정 건까지는 무료로 제공하기도 함)*
+Model Customization: Fine-Tune 이라고 보면 된다. "Train with My Own Data" 를 통해 모델을 미세조정할 수 있도록 기능 제공*
 
 
 
@@ -131,11 +125,13 @@ API를 활용하여 OCR 인식 결과 텍스트와 highlighed bounding box 까�
 
 ----
 
-OCR 결과를 평가하는 대표적인 메트릭은 원문과 인식된 텍스트 결과 간 거리 기반 유사도를 측정하여 유사도/오차를 계산할 수 있는 방법과 
+이번 테스트에서는 앞서 말씀 드린 것처럼, 저의 경험을 기반으로 여러 서비스들을 비교평가했습니다. 이 외에, 정량적으로 OCR을 평가할 수 있는 방법들이 있어 간단히 소개해드리려 합니다. OCR 결과를 평가하는 데에는 여러 메트릭이 사용되는데, 원문과 인식된 텍스트 결과 간 거리 기반 유사도를 측정하여 유사도/오차를 계산할 수 있는 방법들이 있으며, 대표적으로는 (1) 정확도, (2) CER(Character Error Rate), (3) WER(Word Error Rate) 등이 있습니다. 공통점으로는, 정량적인 평가를 위해서는 원문에 대한 레이블링인 `ground truth text` 가 필요하다는 점입니다. 
+
+1. **정확도 (Accuracy)**: OCR 시스템의 가장 중요한 평가 지표 중 하나입니다. 정확도는 시스템이 얼마나 정확하게 텍스트를 인식하는지를 나타내며, 일반적으로 추출된 텍스트와 실제 텍스트 간의 일치율을 통해 계산됩니다.
+2. **문자 오인식율 (Character Error Rate, CER)**: 추출된 텍스트와 실제 텍스트 간의 문자 단위 오차 비율입니다. CER은 삭제, 삽입, 대체 등으로 인한 오류를 포함합니다.
+3. **단어 오인식율 (Word Error Rate, WER)**: CER과 유사하지만, 단어 단위로 오류를 측정합니다. 이는 문맥적 정확성을 더 잘 반영할 수 있습니다.
 
 관련된 내용은 [이 포스팅](https://towardsdatascience.com/evaluating-ocr-output-quality-with-character-error-rate-cer-and-word-error-rate-wer-853175297510)에서 자세히 다루고 있으니 참고해주세요.
-
-
 
 # Reference
 
