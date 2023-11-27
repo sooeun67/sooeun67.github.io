@@ -119,7 +119,9 @@ API를 활용하여 OCR 인식 결과 텍스트와 highlighed bounding box 까�
 | <span style="color:blue">**우선 검토해볼만한 서비스**</span> |                                                              |                                                              | ✔                                                            |                                                              | ✔                                                            | ✔                                                            | ✔                                                            |                                                              |
 
 \* *특화 모델: 영수증, 사업자등록증 등 특정 문서를 학습한 OCR 모델로 보통 해당 양식의 이미지 정보가 미리 정의된 JSON 구조에 맞추어 리턴됨*
+
 \***Model Customization: Fine-Tune 이라고 보면 된다. "Train with My Own Data" 를 통해 모델을 미세조정할 수 있도록 기능 제공*
+
 \****요금: 1건, 일반 OCR, Base Plan 기준이며, 건수/목적에 따라 매우 상이(많은 서비스에서 특정 건까지는 무료로 제공하기도 함)*
 
 ## OCR 평가 방법
