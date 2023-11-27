@@ -29,7 +29,7 @@ tags:
 
 ### 기술 원리
 
-`OCR = Text Detection + Text Recognition`
+#### `OCR = Text Detection + Text Recognition`
 
 OCR은 Detection, Classification, Segmentation 기법이 결합된 형태로, 최근에는 속도를 개선하거나 프로세스를 조정하는 등 다양한 형태로 발전하고 있습니다. OCR 엔진에는 여러 OCR 모델과 알고리즘이 단계 별 task를 수행합니다. Text detection과 Text Recognition이 가장 중심적인 task 이며, 전체적인 워크 플로우는 아래와 같습니다. 
 
@@ -42,14 +42,12 @@ OCR은 Detection, Classification, Segmentation 기법이 결합된 형태로, �
 4. Restructuring: input image에 있던 좌표에 따라 텍스트를 재배치. 재구성된 데이터는 원본 이미지와 구조적으로 유사한 형태로 생성됨.
    ex> `이름: 오수은` -> `[오수은]은 이름이다` 
 
-# Why Does it Matter? OCR이 주목받는 이유? 
-
+# Why Does it Matter? OCR이 주목받는 이유
 ----
 
 OCR은 기업의 이미지 및 문서 처리 업무를 자동화하여 프로세스 효율화 및 비용 절감에 큰 효과가 있다고 평가 받고 있습니다. 기존의 대다수 비즈니스에서는 인보이스, 계약서, 영수증, 사업자등록증 등 여러 형태의 인쇄 매체 정보를 수신하는 과정을 포함하고 있기 때문에, 단순 반복적인 RPA와 같은 업무 프로세스에서 사람의 공수를 효과적으로 절감할 수 있는 기술입니다. 
 
 # 테스트 방법
-
 
 --------
 
@@ -87,14 +85,10 @@ API를 활용하여 OCR 인식 결과 텍스트와 highlighed bounding box 까�
 서비스별, 테스트 이미지별 소요 시간을 비교한 그래프 입니다. 
 해당 테스트를 통해 속도 측면에서 가장 우수한 성능을 보여준 서비스는 Google Cloud Vision, Azure Document Intelligence, Upstage 와 Naver Clova 순이라고 볼 수 있을 것 같네요.
 
-![image-20231127095426445](/assets/img/2023-11-25-ocr-comparison/image-20231127095426445.png)
-
+![api-comparison](/assets/img/2023-11-25-ocr-comparison/api-comparison.png)
 
 # OCR 서비스 비교평가 테이블 (2023/11/21 기준)
-
 ----------
-
-
 
 |                              | **Tesseract**                                                | **EasyOCR**                                                  | **Google Vision**                                            | **AWS** **Textract**                                         | **Azure Document Intelligence**                              | **Naver** **Clova**                                          | **Upstage**                                                  | **PaddleOCR**                                                |
 | :---------------------------: | :------------------------------------------------------------: | :------------------------------------------------------------: | :------------------------------------------------------------: | :------------------------------------------------------------: | :------------------------------------------------------------: | :------------------------------------------------------------: | :------------------------------------------------------------: | :------------------------------------------------------------: |
@@ -109,15 +103,12 @@ API를 활용하여 OCR 인식 결과 텍스트와 highlighed bounding box 까�
 | **API 사용 난이도**          | 하                                                           | 하                                                           | 중상                                                         | 중                                                           | 하                                                           | 하                                                           | 하                                                           | 중                                                           |
 | **고객 지원**                | X                                                            | X                                                            | X                                                            | O                                                            | O                                                            | O                                                            | O                                                            | X                                                            |
 | **confidence score 제공**    | O                                                            | O                                                            | △                                                            | O                                                            | O                                                            | O                                                            | O (문서별,단어별 각각 제공)                                  | O                                                            |
-| **총평**                     | - 전통있는 대표적 OCR <br />- 유료 서비스에 비해서는 전처리 해야하는 단점이 있으나 기본 사양한 충실히 해줌 | - 쉽고  직관적인 사용법이 장점이나 한글 인식률이 매우 떨어져 활용하기 힘들어보임 <br />- 속도 매우 느림 | - 압도적인  속도. 초기  세팅이 상대적으로 번거로움<br />-  음영/그림자  등 이미지 퀄리티에 따른 인식률 차이가 있으나, 한글 및 영어 모두 괜찮은 성능을 보임 | - 영문  데이터에 최고<br /> - 자유도가  없으나 pre-built model 을  통해 웬만한 영문 서류 처리 가능 <br />- 영역별  개체 인식 및 confidence score를 통해  추가 검증 가능 | - 기존 Azure Vision 서비스  보다 고도화된 서비스<br />- 다양한  특화모델 제공하여 용도별 추가 테스트 필요<br />- 최근  출시된 V4.0부터는 네이버 Clova와  마찬가지로 “model customization”가능<br />- 한글 인식률 괜찮은 편 | -  현재  가장 무난하고 우수한 한글 OCR  서비스<br />- 다양한  특화 모델 제공하며,  특화  모델과 맞지 않는 경우 “템플릿 생성”을 통해  반복되는 양식을 train my own data 할 수  있다는 장점 | - Documentation은  부실하고, UI/UX 또한 user-friendly  하지  않음<br />- 관련 reference 없는편이나, 표+글자  인식률이 휴리스틱하게  판단할 때, 가장  뛰어나 보임 | - 다양한  모델 제공<br />- EasyOCR 대비  속도&성능  측면에서 우월하나, Tesseract는  테스트 이미지에 따라 상이<br />- 버전  컨트롤 필요 (Python  3.10 이하만  호환 →downgrade 필요) |
+| **<span style="color:blue">*총평* text</span>.**| - 전통있는 대표적 OCR <br />- 유료 서비스에 비해서는 전처리 해야하는 단점이 있으나 기본 사양한 충실히 해줌 | - 쉽고  직관적인 사용법이 장점이나 한글 인식률이 매우 떨어져 활용하기 힘들어보임 <br />- 속도 매우 느림 | - 압도적인  속도. 초기  세팅이 상대적으로 번거로움<br />-  음영/그림자  등 이미지 퀄리티에 따른 인식률 차이가 있으나, 한글 및 영어 모두 괜찮은 성능을 보임 | - 영문  데이터에 최고<br /> - 자유도가  없으나 pre-built model 을  통해 웬만한 영문 서류 처리 가능 <br />- 영역별  개체 인식 및 confidence score를 통해  추가 검증 가능 | - 기존 Azure Vision 서비스  보다 고도화된 서비스<br />- 다양한  특화모델 제공하여 용도별 추가 테스트 필요<br />- 최근  출시된 V4.0부터는 네이버 Clova와  마찬가지로 “model customization”가능<br />- 한글 인식률 괜찮은 편 | -  현재  가장 무난하고 우수한 한글 OCR  서비스<br />- 다양한  특화 모델 제공하며,  특화  모델과 맞지 않는 경우 “템플릿 생성”을 통해  반복되는 양식을 train my own data 할 수  있다는 장점 | - Documentation은  부실하고, UI/UX 또한 user-friendly  하지  않음<br />- 관련 reference 없는편이나, 표+글자  인식률이 휴리스틱하게  판단할 때, 가장  뛰어나 보임 | - 다양한  모델 제공<br />- EasyOCR 대비  속도&성능  측면에서 우월하나, Tesseract는  테스트 이미지에 따라 상이<br />- 버전  컨트롤 필요 (Python  3.10 이하만  호환 →downgrade 필요) |
 | **우선 검토해볼만한 서비스** |                                                              |                                                              | ✔                                                            |                                                              | ✔                                                            | ✔                                                            | ✔                                                            |                                                              |
 
 **특화 모델: 영수증, 사업자등록증 등 특정 문서를 학습한 OCR 모델로 보통 해당 양식의 이미지 정보가 미리 정의된 JSON 구조에 맞추어 리턴됨*
 요금: 1건, 일반 OCR, Base Plan 기준이며, 건수/목적에 따라 매우 상이(많은 서비스에서 특정 건까지는 무료로 제공하기도 함)*
 Model Customization: Fine-Tune 이라고 보면 된다. "Train with My Own Data" 를 통해 모델을 미세조정할 수 있도록 기능 제공*
-
-
-
 
 
 
@@ -132,7 +123,7 @@ Model Customization: Fine-Tune 이라고 보면 된다. "Train with My Own Data"
 3. **단어 오인식율 (Word Error Rate, WER)**: CER과 유사하지만, 단어 단위로 오류를 측정합니다. 이는 문맥적 정확성을 더 잘 반영할 수 있습니다.
 
 관련된 내용은 [이 포스팅](https://towardsdatascience.com/evaluating-ocr-output-quality-with-character-error-rate-cer-and-word-error-rate-wer-853175297510)에서 자세히 다루고 있으니 참고해주세요.
-
+> 다음 포스팅에서는 정량적인 평가 방법을 다루는 것도 좋은 아이디어 같네요 :)
 # Reference
 
 ---------
