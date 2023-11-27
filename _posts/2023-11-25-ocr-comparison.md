@@ -21,30 +21,32 @@ tags:
 <img src="/assets/img/2023-11-25-ocr-comparison/logo.png" alt="logo" style="width:80%">
 <figcaption align = "center"></figcaption>
 
-"텍스트 이미지를 기계가 읽을 수 있는 포맷의 디지털 이미지 파일로 변환하는 기술" 이 사전적인 의미이나, 우리가 핸드폰 카메라로 사진을 찍었을 때, 사진 속 텍스트를 인식 해주는 "사진 속 글자 인식" 기능을 생각하면 바로 이해가 가실 겁니다!
+"텍스트 이미지를 기계가 읽을 수 있는 포맷의 디지털 이미지 파일로 변환하는 기술" 이 사전적인 의미이나, 우리가 핸드폰 카메라로 사진을 찍었을 때, 사진 속 텍스트를 인식 해주는 **<U><span style="background-color:#ffdce0">"사진 속 글자 인식"</span></U>** 기능을 생각하면 바로 이해가 가실 겁니다!
+
 
 ### 기술 원리
 
 #### `OCR = Text Detection + Text Recognition`
 
-OCR은 Detection, Classification, Segmentation 기법이 결합된 형태로, 최근에는 속도를 개선하거나 프로세스를 조정하는 등 다양한 형태로 발전하고 있습니다. OCR 엔진에는 여러 OCR 모델과 알고리즘이 단계 별 task를 수행합니다. Text detection과 Text Recognition이 가장 중심적인 task 이며, 전체적인 워크 플로우는 아래와 같습니다. 
+OCR은 **Detection, Classification, Segmentation** 기법이 결합된 형태로, 최근에는 속도를 개선하거나 프로세스를 조정하는 등 다양한 형태로 발전하고 있습니다. OCR 엔진에는 여러 OCR 모델과 알고리즘이 단계 별 task를 수행합니다. Text detection과 Text Recognition이 가장 중심적인 task 이며, 전체적인 워크 플로우는 아래와 같습니다. 
 
 <img src="/assets/img/2023-11-25-ocr-comparison/ocr-workflow.png" alt="ocr-workflow" style="width:100%">
 <figcaption align = "center"><b>이미지 출처 - www.thedatahunt.com/trend-insight/ocr</b></figcaption>
 
-1. 이미지 전처리: 스캔된 문서를 기울기 보정, 얼룩 제거 등 손상된 이미지를 복구
-2. Text Detection: Object Detection의 확장 버전이라고 볼 수 있고, 검출된 영역의 문자가 무엇인지 인식하는 과정
-3. Text Recognition: 이 과정을 통해 텍스트와 함께 이미지 내 좌표 정보 획득
-4. Restructuring: input image에 있던 좌표에 따라 텍스트를 재배치. 재구성된 데이터는 원본 이미지와 구조적으로 유사한 형태로 생성됨.
+1. **이미지 전처리**: 스캔된 문서를 기울기 보정, 얼룩 제거 등 손상된 이미지를 복구
+2. **Text Detection**: Object Detection의 확장 버전이라고 볼 수 있고, 검출된 영역의 문자가 무엇인지 인식하는 과정
+3. **Text Recognition**: 이 과정을 통해 텍스트와 함께 이미지 내 좌표 정보 획득
+4. **Restructuring**: input image에 있던 좌표에 따라 텍스트를 재배치. 재구성된 데이터는 원본 이미지와 구조적으로 유사한 형태로 생성됨.
    ex> `이름: 오수은` -> `[오수은]은 이름이다` 
 
 # Why Does it Matter? OCR이 주목받는 이유
 ----
 
-OCR은 기업의 이미지 및 문서 처리 업무를 자동화하여 프로세스 효율화 및 비용 절감에 큰 효과가 있다고 평가 받고 있습니다. 기존의 대다수 비즈니스에서는 인보이스, 계약서, 영수증, 사업자등록증 등 여러 형태의 인쇄 매체 정보를 수신하는 과정을 포함하고 있기 때문에, 단순 반복적인 RPA와 같은 업무 프로세스에서 사람의 공수를 효과적으로 절감할 수 있는 기술입니다. 
+OCR은 기업의 이미지 및 문서 처리 **_<U><span style="background-color:#ffdce0">업무를 자동화하여 프로세스 효율화 및 비용 절감</span></U>_**에 큰 효과가 있다고 평가 받고 있습니다. 
+기존의 대다수 비즈니스에서는 인보이스, 계약서, 영수증, 사업자등록증 등 여러 형태의 인쇄 매체 정보를 수신하는 과정을 포함하고 있기 때문에, 단순 반복적인 RPA와 같은 업무 프로세스에서 사람의 공수를 효과적으로 절감할 수 있는 기술입니다. 
 
 # 테스트 
-8가지 서비스의 API를 5가지 테스트 이미지를 가지고 OCR API 호출에 대한 response를 받아 인식된 텍스트 결과와 소요시간을 비교평가했습니다.
+ **_<U><span style="color:purple">8가지 서비스의 API를 5가지 테스트 이미지를 가지고 OCR API 호출에 대한 response를 받아 인식된 텍스트 결과와 소요시간을 비교평가했습니다.</span></U>_**
 `OpenCV`를 활용하여 원본 이미지에서 이미지가 어떻게 detect 되고 segment 되어 영역이 나뉘는지를 보고자 했습니다. 
 --------
 
@@ -91,7 +93,7 @@ API를 활용하여 OCR 인식 결과 텍스트와 highlighed bounding box 까�
 
 ![api-comparison](/assets/img/2023-11-25-ocr-comparison/api-comparison.png)
 
-# [총정리] OCR 서비스 비교평가 테이블 (2023/11/21 기준)
+# <span style="color:purple"> [총정리] OCR 서비스 비교평가 테이블 (2023/11/21 기준) </span>
 ----------
 
 |                              | **Tesseract**                                                | **EasyOCR**                                                  | **Google Vision**                                            | **AWS** **Textract**                                         | **Azure Document Intelligence**                              | **Naver** **Clova**                                          | **Upstage**                                                  | **PaddleOCR**                                                |
