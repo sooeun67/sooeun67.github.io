@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "[OCR/AI] 2023년 최신판 OCR 8가지 API 비교평가 테스트"
+title:  "[OCR/AI] OCR 성능 평가: 8가지 파이썬 API 비교평가 테스트 (23년도 최신버전)"
 categories:
   - data science
 tags:
