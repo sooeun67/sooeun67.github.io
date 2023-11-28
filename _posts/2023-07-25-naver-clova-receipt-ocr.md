@@ -47,6 +47,9 @@ Secret Key **“생성”** 클릭
 ![6](/assets/img/2023-07-25-naver-clova-receipt-ocr/6.png)
 ![7](/assets/img/2023-07-25-naver-clova-receipt-ocr/7.png)
 
+
+해당 Key 와 URL을 사용해서 API 호출에 사용 하면 됩니다.
+
 ## API 호출 건당 OCR 이용 예상 요금
 ---
 
