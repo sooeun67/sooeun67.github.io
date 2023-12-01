@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "[OCR/Python] Upstage OCR 모델 API 신청부터 코랩에서 사용해보기"
+title:  "[OCR/Python] Upstage OCR 모델 API 신청부터 직접 사용해보자(코랩)"
 categories:
   - data science
 tags:
@@ -19,23 +19,23 @@ tags:
 
 [Upstage 홈페이지](https://www.upstage.ai/)에 접속하면, Document AI 라는 서비스가 보입니다. 
 
-![스크린샷 2023-11-30 오후 2.44.25](/Users/sooeunoh/Documents/GitHub/sooeun67.github.io/assets/img/2023-11-29-ocr-upstage/스크린샷 2023-11-30 오후 2.44.25.png)
+![logo](/assets/img/2023-11-29-ocr-upstage/upstage.png)
 
 해당 서비스를 클릭하면, 아래와 같은 **"무료 크레딧 증정 이벤트"** 팝업창을 볼 수 있을 겁니다. 
 
-![credit](/Users/sooeunoh/Documents/GitHub/sooeun67.github.io/assets/img/2023-11-29-ocr-upstage/credit.png)
+![credit](/assets/img/2023-11-29-ocr-upstage/credit.png)
 
 ## 2. 콘솔 이동
 
 팝업창을 클릭하면 회원가입을 진행한 후, [로그인](https://console.upstage.ai/login/terms)을 하면, Console로 이동하게 됩니다.
 
-![console](/Users/sooeunoh/Documents/GitHub/sooeun67.github.io/assets/img/2023-11-29-ocr-upstage/console.png)
+![console](/assets/img/2023-11-29-ocr-upstage/console.png)
 
 ## 3. 결제 수단 등록
 
 서비스 사용을 위해서는 카드 정보를 입력하여 결제 수단을 먼저 등록해야 합니다. `Billing` 페이지에서는 각 프로젝트 별로 서비스 이용에 대한 요금이 나옵니다. 
 
-![스크린샷 2023-11-30 오후 2.53.29](/Users/sooeunoh/Documents/GitHub/sooeun67.github.io/assets/img/2023-11-29-ocr-upstage/스크린샷 2023-11-30 오후 2.53.29.png)
+![credit(/assets/img/2023-11-29-ocr-upstage/credit.png)
 
 ## 4. 프로젝트 생성
 
@@ -43,27 +43,27 @@ Upstage의 OCR 서비스인 **Document AI** 를 사용하기 위해 **Create New
 
 아래 두 프로젝트는 기존에 제가 생성해놓은 프로젝트입니다. 새롭게 생성된 프로젝트는 아래 리스트에 추가되겠죠?
 
-![create_project](/Users/sooeunoh/Documents/GitHub/sooeun67.github.io/assets/img/2023-11-29-ocr-upstage/create_project.png)
+![create_project](/assets/img/2023-11-29-ocr-upstage/create_project.png)
 
 Project명은 랜덤하게 assign 되나 원하는 이름으로 변경해도 됩니다. Create 를 클릭해 생성합니다.
 
-<img src="/Users/sooeunoh/Documents/GitHub/sooeun67.github.io/assets/img/2023-11-29-ocr-upstage/create_2.png" alt="create_2" style="zoom:40%;" />
+![create_2](/assets/img/2023-11-29-ocr-upstage/create_2.png)
 
 ## 5. Token 생성
 
 새로운 프로젝트가 생성되면, 해당 프로젝트 페이지로 자동으로 이동하게 됩니다. **Access Token**을 클릭해 새로운 토큰을 생성합니다.
 
-<img src="/Users/sooeunoh/Documents/GitHub/sooeun67.github.io/assets/img/2023-11-29-ocr-upstage/access_token.png" alt="access_token" style="zoom:67%;" />
+![access_token](/assets/img/2023-11-29-ocr-upstage/access_token.png)
 
 토큰명 또한 자동으로 생성됩니다. **Create** 을 눌러 생성합니다.
 
-<img src="/Users/sooeunoh/Documents/GitHub/sooeun67.github.io/assets/img/2023-11-29-ocr-upstage/generate_token.png" alt="generate_token" style="zoom:33%;" />
+![generate_token](/assets/img/2023-11-29-ocr-upstage/generate_token.png)
 
 이제 토큰 Key 정보가 생성된 것을 확인할 수 있습니다. 이 토큰을 가지고, 코랩이나 주피터 노트북에서 API를 호출 하면 됩니다.
 
 > Token 키는 공개되지 않도록 유의 해야 합니다~
 
-<img src="/Users/sooeunoh/Documents/GitHub/sooeun67.github.io/assets/img/2023-11-29-ocr-upstage/generate_token_done.png" alt="generate_token_done" style="zoom:48%;" />
+![generate_token_done](/assets/img/2023-11-29-ocr-upstage/generate_token_done.png)
 
 자 이제 API 사용을 위한 모든 준비가 끝났습니다!!! 이제 코랩이나 jupyter notebook 환경으로 가볼게요~
 
