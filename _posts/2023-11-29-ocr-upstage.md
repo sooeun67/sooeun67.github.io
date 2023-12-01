@@ -35,7 +35,7 @@ tags:
 
 서비스 사용을 위해서는 카드 정보를 입력하여 결제 수단을 먼저 등록해야 합니다. `Billing` 페이지에서는 각 프로젝트 별로 서비스 이용에 대한 요금이 나옵니다. 
 
-![credit(/assets/img/2023-11-29-ocr-upstage/credit.png)
+![credit](/assets/img/2023-11-29-ocr-upstage/credit.png)
 
 ## 4. 프로젝트 생성
 
@@ -43,7 +43,7 @@ Upstage의 OCR 서비스인 **Document AI** 를 사용하기 위해 **Create New
 
 아래 두 프로젝트는 기존에 제가 생성해놓은 프로젝트입니다. 새롭게 생성된 프로젝트는 아래 리스트에 추가되겠죠?
 
-![create_project](/assets/img/2023-11-29-ocr-upstage/create_project.png)
+<img src="/assets/img/2023-11-29-ocr-upstage/create_project.png" width="300" height="150"/>
 
 Project명은 랜덤하게 assign 되나 원하는 이름으로 변경해도 됩니다. Create 를 클릭해 생성합니다.
 
