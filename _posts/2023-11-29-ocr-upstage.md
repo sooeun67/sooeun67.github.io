@@ -43,7 +43,7 @@ Upstage의 OCR 서비스인 **Document AI** 를 사용하기 위해 **Create New
 
 아래 두 프로젝트는 기존에 제가 생성해놓은 프로젝트입니다. 새롭게 생성된 프로젝트는 아래 리스트에 추가되겠죠?
 
-<img src="/assets/img/2023-11-29-ocr-upstage/create_project.png" width="300" height="150"/>
+![create_project](/assets/img/2023-11-29-ocr-upstage/create_project.png)
 
 Project명은 랜덤하게 assign 되나 원하는 이름으로 변경해도 됩니다. Create 를 클릭해 생성합니다.
 
@@ -58,7 +58,7 @@ Project명은 랜덤하게 assign 되나 원하는 이름으로 변경해도 됩
 토큰명 또한 자동으로 생성됩니다. **Create** 을 눌러 생성합니다.
 
 <p align="center">
-  <img src="/assets/img/2023-11-29-ocr-upstage/generate_token.png" width="150" height="150" />
+  <img src="/assets/img/2023-11-29-ocr-upstage/generate_token.png" style="width:50% height:50%"  />
 </p>
 
 이제 토큰 Key 정보가 생성된 것을 확인할 수 있습니다. 이 토큰을 가지고, 코랩이나 주피터 노트북에서 API를 호출 하면 됩니다.
