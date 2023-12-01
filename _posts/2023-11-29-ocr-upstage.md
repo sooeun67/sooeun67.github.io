@@ -57,13 +57,17 @@ Project명은 랜덤하게 assign 되나 원하는 이름으로 변경해도 됩
 
 토큰명 또한 자동으로 생성됩니다. **Create** 을 눌러 생성합니다.
 
-![generate_token](/assets/img/2023-11-29-ocr-upstage/generate_token.png)
+<p align="center">
+  <img src="/assets/img/2023-11-29-ocr-upstage/generate_token.png" width="150" height="150" />
+</p>
 
 이제 토큰 Key 정보가 생성된 것을 확인할 수 있습니다. 이 토큰을 가지고, 코랩이나 주피터 노트북에서 API를 호출 하면 됩니다.
 
 > Token 키는 공개되지 않도록 유의 해야 합니다~
 
-![generate_token_done](/assets/img/2023-11-29-ocr-upstage/generate_token_done.png)
+<p align="center">
+  <img src="/assets/img/2023-11-29-ocr-upstage/generate_token_done.png" width="150" height="150" />
+</p>
 
 자 이제 API 사용을 위한 모든 준비가 끝났습니다!!! 이제 코랩이나 jupyter notebook 환경으로 가볼게요~
 
