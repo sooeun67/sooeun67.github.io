@@ -67,7 +67,7 @@ Project명은 랜덤하게 assign 되나 원하는 이름으로 변경해도 됩
 
 이제 토큰 Key 정보가 생성된 것을 확인할 수 있습니다. 이 토큰을 가지고, 코랩이나 주피터 노트북에서 API를 호출 하면 됩니다.
 
-> Token 키는 공개되지 않도록 유의 해야 합니다~
+> Token 키는 공개되지 않도록 유의 해야 합니다
 
 <p align="center">
   <img src="/assets/img/2023-11-29-ocr-upstage/generate_token_done.png" style="width:80% height:60%" />
@@ -335,17 +335,6 @@ for image_type, image_path in image_paths.items():
 
 print(ocr_results_df)
 ```
-
-    <ipython-input-19-e397f976c761>:33: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
-      ocr_results_df = ocr_results_df.append({
-    <ipython-input-19-e397f976c761>:33: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
-      ocr_results_df = ocr_results_df.append({
-    <ipython-input-19-e397f976c761>:33: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
-      ocr_results_df = ocr_results_df.append({
-    <ipython-input-19-e397f976c761>:33: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
-      ocr_results_df = ocr_results_df.append({
-
-
                   Image Type                                           OCR Text  Processing Time (s)
     0         Korean Receipt  영 수 증  동대문구 장한로 130 1층 106호 252-30-00947 : 3 :...             2.463590
     1        English Receipt  WHOLE FOODS� M A R KE T SDY Sandy Springs Rd 5...             1.958015
@@ -357,16 +346,11 @@ print(ocr_results_df)
     <ipython-input-19-e397f976c761>:33: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
       ocr_results_df = ocr_results_df.append({
 
-
 ### `ocr_result_df`에 각 이미지별 인식 결과 텍스트와 소요시간이 담겼습니다
-
 
 ```python
 ocr_results_df
 ```
-
-
-
 
 
   <div id="df-6db62692-6196-486f-8232-88b2c0bfe4f7" class="colab-df-container">
@@ -639,14 +623,11 @@ ocr_results_df
 
 
 
-
-
-
 # 2. 유의 사항
 
 ------
 
-- Upstage 의 billing system 은 서비스를 "사용한 만큼" 지불합니다. 따라서, project 를 생성하고 매번 삭제할 필요는 없기 때문에, 동일한 프로젝트명과 Token을 사용할 수 있어 편리할 것 같네요.
+- Upstage 의 billing system 은 서비스를 **"사용한 만큼"** 지불합니다. 따라서, project 를 생성하고 매번 삭제할 필요는 없기 때문에, 동일한 프로젝트명과 Token을 사용할 수 있어 편리할 것 같네요.
 
 - 사용량(Usage)은 Console 내 **Usage** 메뉴에서 조회가 가능하며, 보통 01:00 UTC 기준으로 업데이트 된다고 합니다. 그러나, 실시간 이용량 조회가 지원되지 않기 때문에, 단시간 내에 여러 건의 테스트를 진행한다면, 대략적으로 본인이 몇 건을 호출하는지 감을 잡고 진행하는 것이 좋을 것 같다는 생각이 드네요. 
 

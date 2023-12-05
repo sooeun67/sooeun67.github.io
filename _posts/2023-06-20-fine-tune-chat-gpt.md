@@ -43,3 +43,5 @@ Job failed. Please contact support@openai.com if you need assistance.
 ```
 
 Train 이나 Valid file에 충분한 데이터가 없다는 뜻.
+
+## 2. Solution: Add more data!!!! 데이터를 추가하면 해결됨
