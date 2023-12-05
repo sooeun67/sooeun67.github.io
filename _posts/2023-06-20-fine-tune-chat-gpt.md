@@ -1,7 +1,7 @@
 ---
 
 layout: single
-title:  "[ChatGPT/AI] 나만의 ChatGPT 모델 만들기 (w/ Fine-Tune)"
+title:  "[에러 해결] The number of classes in file-vFB5CE9LrZcacVJzMJnCuiTw does not match the number of classes specified in the hyperparameters (w/ ChatGPT Fine-Tune)"
 categories:
   - data science
 tags:
@@ -10,6 +10,7 @@ tags:
   - ChatGPT
   - OpenAI
   - 데보션
+  - 에러 해결
 ---
 
 # Encountered Problems & Solutions
