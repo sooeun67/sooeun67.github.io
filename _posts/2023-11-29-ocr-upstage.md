@@ -138,7 +138,7 @@ drive.mount('/content/drive')
 
 
 ```python
-api_key = "BZlHbU8knNpCPFZG3XV5psNob10vXftb"
+api_key = "BZlH..."
 filename = "/content/drive/MyDrive/ocr_test_images/한글_영수증.png"
 
 url = "https://ap-northeast-2.apistage.ai/v1/document-ai/ocr"
