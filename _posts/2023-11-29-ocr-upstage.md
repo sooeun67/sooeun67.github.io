@@ -1,12 +1,13 @@
 ---
 layout: single
-title:  "[OCR/Python] Upstage OCR 모델 API 신청부터 직접 사용해보자(코랩)"
+title:  "[OCR/AI] Upstage OCR 모델 API 신청부터 직접 사용해보자(코랩)"
 categories:
   - data science
 tags:
   - AI
   - OCR
-
+toc: true
+toc_sticky: true
 ---
 
 안녕하세요, 이번 포스팅에서는 OCR 의 "신흥강자" **Upstage** 의 OCR API를 사용하여 테스트 이미지를 인식해보겠습니다. OCR 테스를 위해서는 먼저 Upstage 에 회원 가입 후 Console에 접속하여 API 사용을 위한 준비를 마치고, Colab과 같은 jupyter notebook 환경에서 테스트를 진행해 보고자 합니다. 8가지 이상의 여러 OCR 서비스들을 테스트 해보았을 때, Upstage의 Document AI 서비스는 신생 서비스이지만, 신청 및 사용 절차가 상대적으로 간편하여 사용 복잡도나 난이도가 쉬운 편이라고 생각됩니다.
@@ -15,7 +16,7 @@ tags:
 
 --------
 
-## 1. 회원가입
+## 0-1.회원가입
 
 [Upstage 홈페이지](https://www.upstage.ai/)에 접속하면, Document AI 라는 서비스가 보입니다. 
 
@@ -25,19 +26,19 @@ tags:
 
 ![credit](/assets/img/2023-11-29-ocr-upstage/credit.png)
 
-## 2. 콘솔 이동
+## 0-2. 콘솔 이동
 
 팝업창을 클릭하면 회원가입을 진행한 후, [로그인](https://console.upstage.ai/login/terms)을 하면, Console로 이동하게 됩니다.
 
 ![console](/assets/img/2023-11-29-ocr-upstage/console.png)
 
-## 3. 결제 수단 등록
+## 0-3. 결제 수단 등록
 
 서비스 사용을 위해서는 카드 정보를 입력하여 결제 수단을 먼저 등록해야 합니다. `Billing` 페이지에서는 각 프로젝트 별로 서비스 이용에 대한 요금이 나옵니다. 
 
 ![credit](/assets/img/2023-11-29-ocr-upstage/credit.png)
 
-## 4. 프로젝트 생성
+## 0-4. 프로젝트 생성
 
 Upstage의 OCR 서비스인 **Document AI** 를 사용하기 위해 **Create New Project**를 클릭해 새로운 프로젝트를 생성합니다. 
 
@@ -51,7 +52,7 @@ Project명은 랜덤하게 assign 되나 원하는 이름으로 변경해도 됩
 
 ![create_2](/assets/img/2023-11-29-ocr-upstage/create_2.png)
 
-## 5. Token 생성
+## 0-5. Token 생성
 
 새로운 프로젝트가 생성되면, 해당 프로젝트 페이지로 자동으로 이동하게 됩니다. **Access Token**을 클릭해 새로운 토큰을 생성합니다.
 
@@ -79,7 +80,7 @@ Project명은 랜덤하게 assign 되나 원하는 이름으로 변경해도 됩
 
 -------
 
-### 0. Basic How-To-Use: From Official Documentation
+### 맛보기. Basic How-To-Use: From Official Documentation
 
 구글 코랩 환경에서 Python 으로 Upstage의 Document AI API를 호출해보겠습니다. Upstage 에서 공식적으로 안내하는 API 호출 방법은 아래와 같습니다. `api_key` 에는 방금 만든 토큰을, `filename`에는 테스트 하고자 하는 이미지 경로를 넣으면 됩니다. 
 
@@ -100,7 +101,7 @@ print(response.json())
 
 5건의 이미지와 서비스별, 이미지별 소요시간 비교 그래프는 OCR 비교평가 포스팅에 별도로 정리해놓았으니, 서비스별 비교평가가 필요한 독자 분들은 [해당 포스팅](https://sooeun67.github.io/data%20science/ocr-comparison/)에서 확인할 수 있습니다. 
 
-# 0. 라이브러리 임포트
+## 1-0. 라이브러리 임포트
 
 
 ```python
@@ -132,7 +133,7 @@ drive.mount('/content/drive')
     Mounted at /content/drive
 
 
-# 1. Basic Usage
+## 1-1. Basic Usage
 - `json` 형식으로 결과가 출력된다
 
 
@@ -148,7 +149,7 @@ print(response.json())
 ```
 
 
-# 2. 개별 이미지에 대한 결과 확인 하기
+## 1-2. 개별 이미지에 대한 결과 확인 하기
 - OpenCV `cv2` 라이브러리를 활용하여 원본 이미지 에서 OCR이 인식된 영역을 bounding box로 표시해보겠습니다.
 
 
@@ -200,7 +201,7 @@ plt.show()
 ![개별이미지](assets/img/2023-11-29-ocr-upstage/개별이미지.png){: #magnific width="220"}
 
 
-# 5가지 테스트 이미지 적용
+## 1-3. 5가지 테스트 이미지 적용
 - 저의 테스트 초기 목적은 8가지 OCR 서비스에 대한 API 호출 및 사용 난이도/복잡도 파악과 서비스별 소요 시간 이었습니다. 이번에는 인식 결과 텍스트와 테스트 이미지별로 소요시간까지 함께 추출해 보겠습니다. 추후에 인식된 텍스트는 원문 텍스트와 함께 오차 등을 비교하며 정량적인 방법으로도 성능 평가가 가능할 것 같네요. 하지만, 이번 포스팅에서는 dataframe 화하여 추출하는 것까지 진행해보겠습니다.  
 
 
@@ -259,7 +260,7 @@ for image_name, image_path in image_paths.items():
 ![멀티플](assets/img/2023-11-29-ocr-upstage/multiple_images.png){: #magnific width="220"}
 
 
-# 소요 시간 테스트
+## 1-4. 소요 시간 테스트
 
 
 ```python
@@ -579,8 +580,10 @@ ocr_results_df
 
 
 
+# 3. 사용 후기
 
-# 2. 유의 사항
+
+# 4. 유의 사항
 
 ------
 
