@@ -44,6 +44,12 @@ Gemini 1.0 에는 세 가지 모델로 크기에 최적화 되어 데이터 센�
 <img src="/assets/img/2023-12-08-google-gemini/performance.png" alt="performance" >
 <figcaption align = "center"> </figcaption>
 
+
+구글의 공식 블로그에 따르면, 이미지 벤치마크 테스트에서 제미나이 울트라는 객체 문자 인식(OCR) 시스템의 도움 없이도 이전의 최신 모델보다 뛰어난 성능을 보였다고 합니다. 
+이러한 벤치마크 결과는 제미나이의 기본적인 멀티모달 기반을 강조하는 동시에 제미나이가 더 복잡한 멀티모달 추론 능력이 있다는 가능성을 보여줍니다.
+
+> OCR 시스템의 도움 없이도 가능하다고요? 음, 그럼 저는 기존 OCR 개의 서비스들을 비교평가한 내용과 제미나이를 비교해보는 포스팅도 작성해봐야겠네요..!
+ 
 <img src="/assets/img/2023-12-08-google-gemini/multimodal.png" alt="multimodal" >
 <figcaption align = "center"> </figcaption>
 
@@ -58,7 +64,22 @@ Gemini 1.0 에는 세 가지 모델로 크기에 최적화 되어 데이터 센�
 <img src="/assets/img/2023-12-08-google-gemini/worldmap_quiz.png" alt="worldmap" style="width:80%">
 <figcaption align = "center"> </figcaption>
 
+## 기존 Multimodal Model 과의 차이
 
+Multimodal AI는 텍스트, 이미지, 영상, 음성 등 다양한 데이터 모달리티를 함께 고려하여 서로의 관계성을 학습 및 표현하는 기술입니다. 
+따라서 Multimodal AI는 이미지로 텍스트 검색을 하거나 텍스트에서 이미지를 검색, 혹은 이미지와 텍스트를 같이 이해하는 Multimodal 검색이 가능합니다. 
+그리고 최근에는 이미지를 보고 텍스트를 생성하거나 텍스트를 기반으로 이미지를 생성하는 다양한 활용 사례도 존재합니다.
+
+지금까지 multimodal AI model을 만드는 전통적인 방식은 서로 다른 모달리티에 대해 별도의 구성 요소를 학습 시킨 다음 이를 서로 연결하여 일부 기능을 비슷하게 모방하는 것이라 복잡한 추론에는 어려움을 겪을 수 있었다고 합니다.
+
+<img src="/assets/img/2023-12-08-google-gemini/traditional_multimodal.png" alt="traditional_multimodal" style="width:80%">
+<figcaption align = "center"> </figcaption>
+
+Gemini의 경우, foundation 부터 다양한 모달리티에 대한 사전 학습을 통해 기본적으로 멀티모달이 되도록 설계했다고 합니다. 
+그 결과, Gemini는 처음부터 텍스트, 오디오, 이미지, 영상 등 다양한 입력값을 원활하게 이해하고 받아 추론할 수 있으며, 기존 멀티모달 모델보다 훨씬 뛰어난 성능을 보여준다고 하네요.
+
+<img src="/assets/img/2023-12-08-google-gemini/gemini-architecture.png" alt="architecture" style="width:80%">
+<figcaption align = "center"> </figcaption>
 
 ## ChatGPT를 넘어설 수 있을까?
 
