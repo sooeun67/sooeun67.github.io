@@ -53,11 +53,13 @@ Gemini 1.0 에는 세 가지 모델로 크기에 최적화 되어 데이터 센�
 <img src="/assets/img/2023-12-08-google-gemini/multimodal.png" alt="multimodal" >
 <figcaption align = "center"> </figcaption>
 
+더 자세한 내용은 [technical report](https://storage.googleapis.com/deepmind-media/gemini/gemini_1_report.pdf) 를 참고해주세요.
+
 # Why Does it Matter?
 
 ------
 
-텍스트, 이미지, 음성 등 다양한 형태의 정보를 인지하고 inference 할 수 있는 모델입니다. [Hands-on 영상](https://youtu.be/UIZAiXYceBI?si=rrkjKz5u8Xox7la1)을 보시면 바로 이해 가실 겁니다. 
+Gemini는 텍스트, 이미지, 음성 등 다양한 형태의 정보를 인지하고 inference 할 수 있는 모델입니다. 뭐가 그렇게 특별한데? 라고 생각이 드신다면.. [Hands-on 영상](https://youtu.be/UIZAiXYceBI?si=rrkjKz5u8Xox7la1)을 보시면 바로 이해 가실 겁니다. 
 공식 소개 영상에서 표현 했듯이, Gemini는 AI Assistant와 같은 느낌으로 굉장히 빠른 속도로 자연스럽게 반응 합니다. 저는 이 영상을 보면서 영화 아이언맨 속 로버트 다우니 주니어의 AI 비서 자비스가 생각났어요.
 단순히 그림이나 이미지를 인식하는 것을 넘어서, 문맥과 상황을 이해해야 하는 복잡한 추론까지 가능한 것으로 보입니다. 한 예로, 제미나이가 나라 이름 맞추는 퀴즈를 내는데, 사람이 세계 지도 그림 위에 손가락으로 해당 나라를 가리키면 어느 나라인지 이해하고 정답/오답을 알려줍니다.
 
@@ -81,6 +83,9 @@ Gemini의 경우, foundation 부터 다양한 모달리티에 대한 사전 학�
 <img src="/assets/img/2023-12-08-google-gemini/gemini-architecture.png" alt="architecture" style="width:80%">
 <figcaption align = "center"> </figcaption>
 
+조금더 자세히 살펴볼까요? [Technical Report](https://storage.googleapis.com/deepmind-media/gemini/gemini_1_report.pdf) 를 보면, 
+
+
 ## ChatGPT를 넘어설 수 있을까?
 
 -----
@@ -101,6 +106,6 @@ Fine-Tuned Gemini Pro가 적용된 Bard(바드)를 이용할 수 있다고 하�
 ----
 - [https://korea.googleblog.com/2023/12/blog-post_652.html](https://korea.googleblog.com/2023/12/blog-post_652.html)
 - [https://www.techopedia.com/kr/google-gemini-is-a-serious-threat-to-chatgpt-heres-why](https://www.techopedia.com/kr/google-gemini-is-a-serious-threat-to-chatgpt-heres-why)
-
+- [https://storage.googleapis.com/deepmind-media/gemini/gemini_1_report.pdf](https://storage.googleapis.com/deepmind-media/gemini/gemini_1_report.pdf)
 
 
