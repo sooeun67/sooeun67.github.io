@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "제미나이(Gemini)란? Google의 새로운 AI 모델 쉽게 이해하기"
+title:  "[AI 소식] 제미나이(Gemini)란? GPT-4보다 뛰어난 Google의 새로운 AI 모델 쉽게 이해하기"
 categories:
   - data science
 tags:
@@ -22,7 +22,7 @@ Gemini의 구글 공식 소개 영상은 [이 링크](https://deepmind.google/te
 
 Gemini 1.0 에는 세 가지 모델로 크기에 최적화 되어 데이터 센터에서 모바일 장치에까지 이용할 수 있다고 합니다.
 
-<img src="/assets/img/2023-12-08-google-gemini/gemini-3-models.png" alt="mmlu" style="width:80%">
+<img src="/assets/img/2023-12-08-google-gemini/gemini-3-models.png" alt="mmlu" >
 <figcaption align = "center"></figcaption>
 
 - **제미나이 울트라(Gemini Ultra)**: 매우 복잡한 작업에 적합한 가장 유용하고 규모가 큰 모델
@@ -61,7 +61,7 @@ Gemini 1.0 에는 세 가지 모델로 크기에 최적화 되어 데이터 센�
 공식 소개 영상에서 표현 했듯이, Gemini는 AI Assistant와 같은 느낌으로 굉장히 빠른 속도로 자연스럽게 반응 합니다. 저는 이 영상을 보면서 영화 아이언맨 속 로버트 다우니 주니어의 AI 비서 자비스가 생각났어요.
 단순히 그림이나 이미지를 인식하는 것을 넘어서, 문맥과 상황을 이해해야 하는 복잡한 추론까지 가능한 것으로 보입니다. 한 예로, 제미나이가 나라 이름 맞추는 퀴즈를 내는데, 사람이 세계 지도 그림 위에 손가락으로 해당 나라를 가리키면 어느 나라인지 이해하고 정답/오답을 알려줍니다.
 
-<img src="/assets/img/2023-12-08-google-gemini/worldmap_quiz.png" alt="worldmap" style="width:80%">
+<img src="/assets/img/2023-12-08-google-gemini/worldmap_quiz.png" alt="worldmap" >
 <figcaption align = "center"> </figcaption>
 
 ## 기존 Multimodal Model 과의 차이
