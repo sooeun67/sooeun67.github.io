@@ -73,7 +73,7 @@ Multimodal AI는 텍스트, 이미지, 영상, 음성 등 다양한 데이터 �
 그리고 최근에는 이미지를 보고 텍스트를 생성하거나 텍스트를 기반으로 이미지를 생성하는 다양한 활용 사례도 존재합니다.
 
 지금까지 multimodal AI model을 만드는 전통적인 방식은 서로 다른 모달리티에 대해 별도의 구성 요소를 학습 시킨 다음 이를 서로 연결하여 일부 기능을 비슷하게 모방하는 것이라 복잡한 추론에는 어려움을 겪을 수 있었다고 합니다.
-
+비교를 위해 architecture 그림을 보면 좋겠죠? 아래는 기존 multimodal model 구조의 한 예라고 보시면 될 것 같네요. 
 <img src="/assets/img/2023-12-08-google-gemini/traditional_multimodal.png" alt="traditional_multimodal" style="width:80%">
 <figcaption align = "center"> </figcaption>
 
@@ -83,8 +83,16 @@ Gemini의 경우, foundation 부터 다양한 모달리티에 대한 사전 학�
 <img src="/assets/img/2023-12-08-google-gemini/gemini-architecture.png" alt="architecture" style="width:80%">
 <figcaption align = "center"> </figcaption>
 
-조금더 자세히 살펴볼까요? [Technical Report](https://storage.googleapis.com/deepmind-media/gemini/gemini_1_report.pdf) 를 보면, 
+조금더 자세히 살펴볼까요? 
+> [Technical Report](https://storage.googleapis.com/deepmind-media/gemini/gemini_1_report.pdf) 를 보면, *"Gemini models are trained to accommodate textual input interleaved with a wide variety of audio
+and visual inputs, such as natural images, charts, screenshots, PDFs, and videos, and they can produce
+text and image outputs (see Figure 2). The visual encoding of Gemini models is inspired by our own
+foundational work on Flamingo (Alayrac et al., 2022), CoCa (Yu et al., 2022a), and PaLI (Chen et al.,
+2022), with the important distinction that the models are multimodal from the beginning and can
+natively output images using discrete image tokens (Ramesh et al., 2021; Yu et al., 2022b)."* 
 
+위에서 말한 내용이라 같기는 한데, Gemini의 visual encoding 은 구글의 Few-Shot Learning 으로 학습한 언어 이미지 모델인 Flamingo 와 
+이미지 캡션, 시각적 질문 답변, 장면 텍스트 이해 등 주어진 이미지에 대해 설명하거나 질문에 답변하는 다국적 언어 이미지 모델인 PaLI에 대한 기초 작업에서 영감을 받아, 기존 multimodal model과는 다른 모델 구조를 가져가게 되었다고 합니다.
 
 ## ChatGPT를 넘어설 수 있을까?
 
