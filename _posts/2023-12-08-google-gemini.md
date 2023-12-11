@@ -102,8 +102,28 @@ natively output images using discrete image tokens (Ramesh et al., 2021; Yu et a
 
 위에서 언급했듯이, 제미나이는 울트라, 프로, 나노 세 가지 모델로 출시되었는데, 그 중 프로 모델이 바드(Bard)에 탑재되었다고 합니다. 
 ### 문맥 이해하기, 요약, 코딩 등 다양한 기능에서 **<U><span style="background-color:#ffdce0">GPT 3.5보다 우월한 성능을 보여준 제미나이 프로가 적용된 바드를 사용해 보시려면 [바드](https://bard.google.com/chat)로 이동</span></U>** 하시면 됩니다! 
-*현재는 영문으로만 지원되기 때문에, 제미나이가 탑재된 바드를 사용해보시려면 **영문으로 프롬프트를 주고 받으셔야 합니다**.* 
+*현재는 영문으로만 지원되기 때문에, 제미나이가 탑재된 바드를 사용해보시려면 **영문으로 프롬프트를 주고 받으셔야 합니다**.*
 그리고 내년 초에 제미나이 울트라가 탑재된 **Bard Advanced** 가 출시될 예정이라고 하네요.
+
+## 바드에게 물어봤습니다
+
+---
+
+아래는 Gemini Pro가 탑재된 바드에게 영문으로 간단히 Q&A를 날려본건데, 본인(?) 출시일을 잘못 말하는 게 좀 충격적이라,, 아직 데이터의 정확성이 보장된다? 라고 보기에는 어려움이 있을 듯 합니다.
+여러 프롬프트를 날려 보면서, ChatGPT와 비교하는 경험을 통해 좀더 자세히 알 수 있을 것 같네요. 
+
+> Gemini Pro 모델이 탑재되어 있는 것을 확인할 수 있네요
+
+![bard](assets/img/2023-12-08-google-gemini/bard.png)
+
+> 학습 데이터는 최근 언제까지 사용되었을까? 정확한 시기는 알 수 없지만, "23년 6월에 발표되었으니, 그 즈음에는 학습 데이터가 완성되지 않았을까"라는 추론의 reasoning이 제법 마음에 듭니다. 그러나 23년 6월에 Gemini가 발표된게 맞나요??
+
+![bard_trained](assets/img/2023-12-08-google-gemini/bard_trained.png)
+
+> 그래서 다시 묻습니다. 위키피디아 상에는 12월 6일에 출시되었다고 하는데, 무슨 소리를 하는 거냐고.. misinformation 을 인정하네요.
+
+![bard_misinformation](assets/img/2023-12-08-google-gemini/bard_misinformation.png)
+
 
 ## ChatGPT를 넘어설 수 있을까?
 
