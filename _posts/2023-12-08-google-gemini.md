@@ -1,10 +1,12 @@
 ---
 layout: single
-title:  "[AI 소식] 제미나이(Gemini)란? GPT-4보다 뛰어난 Google의 새로운 AI 모델 쉽게 이해하기"
+title:  "[AI 소식] 제미나이(Gemini)란? 구글의 AI 모델 총정리 및 사용하기"
 categories:
   - data science
 tags:
   - AI
+  - NLP
+  - 데보션
 toc: true
 toc_sticky: true
 ---
@@ -93,6 +95,15 @@ natively output images using discrete image tokens (Ramesh et al., 2021; Yu et a
 
 위에서 말한 내용이라 같기는 한데, Gemini의 visual encoding 은 구글의 Few-Shot Learning 으로 학습한 언어 이미지 모델인 Flamingo 와 
 이미지 캡션, 시각적 질문 답변, 장면 텍스트 이해 등 주어진 이미지에 대해 설명하거나 질문에 답변하는 다국적 언어 이미지 모델인 PaLI에 대한 기초 작업에서 영감을 받아, 기존 multimodal model과는 다른 모델 구조를 가져가게 되었다고 합니다.
+
+# 제미나이 사용하기
+
+------
+
+위에서 언급했듯이, 제미나이는 울트라, 프로, 나노 세 가지 모델로 출시되었는데, 그 중 프로 모델이 바드(Bard)에 탑재되었다고 합니다. 
+### 문맥 이해하기, 요약, 코딩 등 다양한 기능에서 **<U><span style="background-color:#ffdce0">GPT 3.5보다 우월한 성능을 보여준 제미나이 프로가 적용된 바드를 사용해 보시려면 [바드](https://bard.google.com/chat)로 이동</span></U>** 하시면 됩니다! 
+*현재는 영문으로만 지원되기 때문에, 제미나이가 탑재된 바드를 사용해보시려면 **영문으로 프롬프트를 주고 받으셔야 합니다**.* 
+그리고 내년 초에 제미나이 울트라가 탑재된 **Bard Advanced** 가 출시될 예정이라고 하네요.
 
 ## ChatGPT를 넘어설 수 있을까?
 
