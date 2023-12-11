@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "[AI 소식] 제미나이(Gemini)란? 구글의 AI 모델 총정리 및 사용하기"
+title:  "[AI 소식] 제미나이(Gemini)란? GPT-4보다 뛰어난 구글의 AI 모델 소개 및 간단 사용 후기"
 categories:
   - data science
 tags:
@@ -114,15 +114,15 @@ natively output images using discrete image tokens (Ramesh et al., 2021; Yu et a
 
 > Gemini Pro 모델이 탑재되어 있는 것을 확인할 수 있네요
 
-![bard](assets/img/2023-12-08-google-gemini/bard.png)
+![bard](/assets/img/2023-12-08-google-gemini/bard.png)
 
 > 학습 데이터는 최근 언제까지 사용되었을까? 정확한 시기는 알 수 없지만, "23년 6월에 발표되었으니, 그 즈음에는 학습 데이터가 완성되지 않았을까"라는 추론의 reasoning이 제법 마음에 듭니다. 그러나 23년 6월에 Gemini가 발표된게 맞나요??
 
-![bard_trained](assets/img/2023-12-08-google-gemini/bard_trained.png)
+![bard_trained](/assets/img/2023-12-08-google-gemini/bard_trained.png)
 
 > 그래서 다시 묻습니다. 위키피디아 상에는 12월 6일에 출시되었다고 하는데, 무슨 소리를 하는 거냐고.. misinformation 을 인정하네요.
 
-![bard_misinformation](assets/img/2023-12-08-google-gemini/bard_misinformation.png)
+![bard_misinformation](/assets/img/2023-12-08-google-gemini/bard_misinformation.png)
 
 
 ## ChatGPT를 넘어설 수 있을까?
