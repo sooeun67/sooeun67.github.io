@@ -68,6 +68,11 @@ Gemini는 텍스트, 이미지, 음성 등 다양한 형태의 정보를 인지�
 <img src="/assets/img/2023-12-08-google-gemini/worldmap_quiz.png" alt="worldmap" >
 <figcaption align = "center"> </figcaption>
 
+야바위도 가능합니다..!
+
+<img src="/assets/img/2023-12-08-google-gemini/yabawi.png" alt="yabawi" >
+<figcaption align = "center"> </figcaption>
+
 ## 기존 Multimodal Model 과의 차이
 
 Multimodal AI는 텍스트, 이미지, 영상, 음성 등 다양한 데이터 모달리티를 함께 고려하여 서로의 관계성을 학습 및 표현하는 기술입니다. 
