@@ -19,6 +19,28 @@ tags:
 
 # Google Vision AI
 
+## **📌 Google Vision AI 소개**
+
+**Google Vision AI**는 Google Cloud에서 제공하는 강력한 **컴퓨터 비전 API**로, 다양한 이미지 분석 기능을 지원하는 인공지능 서비스입니다. 머신러닝 기반의 Vision 모델을 활용하여 **이미지 속 객체, 텍스트, 라벨, 얼굴, 로고, 랜드마크 등**을 자동으로 인식하고 분석할 수 있습니다. 아래와 같이 여러 기능을 제공하고 있고, 저는 `Text_Detection` 과 `Document_Text_Detection` 을 테스트 했습니다. 
+
+### 🚀 주요 기능
+✅ OCR (Optical Character Recognition) 기능
+- <span style="color:blue">**TEXT_DETECTION**:</span> 이미지 속 텍스트(활자체) 추출
+- <span style="color:blue">**DOCUMENT_TEXT_DETECTION**: </span> 문서 내 텍스트 및 레이아웃 분석
+- 손글씨 인식 가능 (비정형 데이터도 일부 지원)
+
+✅ 객체 및 이미지 분석
+- **LABEL_DETECTION**: 이미지 속 주요 객체 및 개념 태깅
+- **OBJECT_LOCALIZATION**: 이미지 내 여러 객체의 위치와 바운딩 박스 추출
+- **LOGO_DETECTION**: 브랜드 및 로고 감지
+
+✅ 얼굴 및 감정 분석
+- **FACE_DETECTION**: 얼굴 감지 및 표정, 감정 분석
+
+✅ 문서 및 제품 검색
+- **WEB_DETECTION**: 이미지 기반 웹 검색
+- **PRODUCT_SEARCH**: 제품 이미지 검색 및 매칭
+
 
 # 1. API를 통한 호출 방식
 
@@ -344,8 +366,6 @@ else:
 서비스 계정 인증 방식을 사용하면 `requests.post()`와 JSON 요청을 직접 만들 필요가 없습니다.
 
 대신, **Google Cloud SDK의 `vision.ImageAnnotatorClient()`가 모든 요청을 자동으로 처리**합니다.
-
-![스크린샷 2025-02-04 오전 10.52.13.png](attachment:574b2f9f-5206-4eb9-8280-83258117ed7d:스크린샷_2025-02-04_오전_10.52.13.png)
 
 
 ### 📌 5. 결론: 어떤 방식을 선택해야 할까?
