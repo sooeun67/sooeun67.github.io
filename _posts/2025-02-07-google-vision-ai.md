@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "[OCR/AI] Google Vision AI 사용법 총정리"
+title:  "[OCR/AI] 손글씨에 강한 Google Cloud Vision AI 사용법 총정리"
 categories:
   - data science
 tags:
@@ -17,11 +17,11 @@ tags:
 
 *저는 Colab 노트북 환경에서 진행했습니다.*
 
-# Google Vision AI
+# Google Cloud Vision API
 
-## **📌 Google Vision AI 소개**
+## **📌 Google Cloud Vision API 소개**
 
-**Google Vision AI**는 Google Cloud에서 제공하는 강력한 **컴퓨터 비전 API**로, 다양한 이미지 분석 기능을 지원하는 인공지능 서비스입니다. 머신러닝 기반의 Vision 모델을 활용하여 **이미지 속 객체, 텍스트, 라벨, 얼굴, 로고, 랜드마크 등**을 자동으로 인식하고 분석할 수 있습니다. 아래와 같이 여러 기능을 제공하고 있고, 저는 `Text_Detection` 과 `Document_Text_Detection` 을 테스트 했습니다. 
+**Google Cloud Vision API**는 Google Cloud에서 제공하는 강력한 **컴퓨터 비전 API**로, 다양한 이미지 분석 기능을 지원하는 인공지능 서비스입니다. 머신러닝 기반의 Vision 모델을 활용하여 **이미지 속 객체, 텍스트, 라벨, 얼굴, 로고, 랜드마크 등**을 자동으로 인식하고 분석할 수 있습니다. 아래와 같이 여러 기능을 제공하고 있고, 저는 `Text_Detection` 과 `Document_Text_Detection` 을 테스트 했습니다. 
 
 ### 🚀 주요 기능
 ✅ OCR (Optical Character Recognition) 기능
@@ -46,7 +46,7 @@ tags:
 
 ### ✅ **1. 기존 API Key 방식**
 
- **Google Vision API Key**를 사용하여 **REST API** 방식으로 요청을 보낼 수 있습니다.
+ **Google Cloud Vision API Key**를 사용하여 **REST API** 방식으로 요청을 보낼 수 있습니다.
 
 즉, **HTTP 요청 (`requests.post()`)을 직접 만들어** Vision API 엔드포인트 (`https://vision.googleapis.com/v1/images:annotate` )로 보냅니다.
 
@@ -165,7 +165,7 @@ API호출 방식 보다 좀더 안정적이라고 보면 됩니다.
 
 4️⃣ **OCR 결과 확인 및 시각화**
 
-## 2-1. ✅ **Colab에서 Google Vision AI API 사용 방법**
+## 2-1. ✅ **Colab에서 Google Cloud Vision API 사용 방법**
 
 Colab 노트북에서 Google Vision API를 사용하려면 **Service Account 인증 방식**을 사용해야 합니다.
 
@@ -240,7 +240,7 @@ Colab 노트북에서 Google Vision API를 사용하려면 **Service Account 인
 
 ---
 
-## 🚀 **3. Colab 환경에서 Google Vision API 설정**
+## 🚀 **3. Colab 환경에서 Google Cloud Vision API 설정**
 
 ### **3️⃣ Google Drive에 서비스 계정 키 업로드**
 
@@ -255,7 +255,7 @@ os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "**vision-api-key.json"**
 
 ---
 
-## 🚀 **4. Google Vision API 클라이언트 설치 및 실행**
+## 🚀 **4. Google Cloud Vision API 클라이언트 설치 및 실행**
 
 ### **4️⃣ `google-cloud-vision` 패키지 설치**
 
@@ -266,7 +266,7 @@ os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "**vision-api-key.json"**
 
 ---
 
-## 🚀 **5. Google Vision API 사용하기**
+## 🚀 **5. Google Cloud Vision API 사용하기**
 
 ### **5️⃣ Python 코드 실행 (OCR 텍스트 추출)**
 
@@ -335,7 +335,7 @@ else:
 
 ### ✅ **2. 기존 API Key 방식**
 
-기존 코드에서는 **Google Vision API Key**를 사용하여 **REST API** 방식으로 요청을 보냈습니다.
+기존 코드에서는 **Google Cloud Vision API Key**를 사용하여 **REST API** 방식으로 요청을 보냈습니다.
 
 즉, **HTTP 요청 (`requests.post()`)을 직접 만들어** Vision API 엔드포인트 (`https://vision.googleapis.com/v1/images:annotate` )로 보냈습니다.
 
