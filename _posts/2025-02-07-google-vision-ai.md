@@ -12,7 +12,7 @@ tags:
 # 0. 들어가며
 안녕하세요! 2025년 첫 포스팅은 OCR 관련 포스팅으로 돌아왔습니다.
 
-[23년도말 OCR 서비스 비교평가 포스팅]([https://](https://sooeun67.github.io/data%20science/ocr-comparison/))이 제 예상보다 많은 분들에게 사랑(?) 받아 얼떨떨했는데요
+[23년도말 OCR 서비스 비교평가 포스팅](https://sooeun67.github.io/data%20science/ocr-comparison/)이 제 예상보다 많은 분들에게 사랑(?) 받아 얼떨떨했는데요
 약 1년이 지난 이 시점에, 좀더 어려운 난이도의 표와 손글씨가 혼재되어 있는 이미지의 데이터를 테이블화 시켜야 하는 Task를 수행하며 OCR서비스들을 다시 한 번 사용하게 되었습니다. 그 중, 꽤 괜찮은 성능을 보여준 Google Vision AI 사용법에 대해 차근차근 정리해보았습니다. OCR 관련 [Google의 official documentation ]([https://](https://cloud.google.com/vision/docs/handwriting?hl=ko))에서 확인해보실 수 있습니다. 
 
 *저는 Colab 노트북 환경에서 진행했습니다.*
